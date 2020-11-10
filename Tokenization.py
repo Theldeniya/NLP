@@ -14,6 +14,8 @@ with open('Srilak_View_Holiday_Inn-Haputale_Uva_Province.csv', 'r') as csv_file:
         txt_clean = [word for word in txt_tokenized if word not in stopwords]
         return txt_clean
 
+    next(csv_reader)
+
     for line in csv_reader:
         # print(line[6])
         blob = TextBlob(line[6])
